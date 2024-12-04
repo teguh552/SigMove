@@ -16,9 +16,9 @@ public class DataManager {
     private void loadUserData() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(DATA_FILE))) {
             userData = (Map<String, String>) ois.readObject();
-            System.out.println("Data pengguna berhasil dimuat.");
+            System.out.println("Data pengguna berhasil dimuat");
         } catch (FileNotFoundException e) {
-            System.out.println("File data tidak ditemukan, membuat file baru.");
+            System.out.println("File data tidak ditemukan, membuat file baru");
         } catch (IOException | ClassNotFoundException e) {
             System.err.println("Gagal membaca data pengguna: " + e.getMessage());
         }
